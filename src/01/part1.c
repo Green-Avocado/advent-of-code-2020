@@ -5,7 +5,8 @@ int main() {
     FILE *input;
     input = fopen("./input", "r");
 
-    if(input == NULL) {
+    if(input == NULL)
+    {
         puts("Error: could not read input file");
         return 1;
     }
