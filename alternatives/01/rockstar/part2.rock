@@ -9,7 +9,7 @@ until santa is nothing
     build home up
     let the elf at home be santa
     the child is I
-    while the child is less than home
+    while the child is less than home without 1
         the kid is the child
         build the kid up
         while the kid is less than home
