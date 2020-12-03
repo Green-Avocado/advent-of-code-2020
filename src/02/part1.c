@@ -33,15 +33,15 @@ int main()
     FILE *input;
     input = fopen("./input", "r");
 
-    char line[256];
-
-    int valid = 0;
-
     if(input == NULL)
     {
         puts("Error: could not read input file");
         return 1;
     }
+
+    char line[256];
+
+    int valid = 0;
 
     while(fgets(line, sizeof(line), input) != NULL)
     {
