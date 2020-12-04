@@ -1,15 +1,15 @@
 main()
 
-init (width) = (rbp a1)
+init width = (rbp add 1)
 >+
 >>+[,<++++[>--------<-]<+>>]<<-
 [<]
 
-init (posx)
+init posx
 >>+
 [<]
 
-init (trees)
+init trees
 >>>+
 [<]
 
@@ -17,7 +17,7 @@ return value for fn call
 >>>>+
 [<]
 
-cp width add 1 to (rbp add 4)
+cp width to (rbp add 4)
 >
 >>>>[-]>[-]<<<<<
 [>>>>+>+<<<<<-]>>>>>[-<<<<<+>>>>>]<
@@ -45,13 +45,13 @@ cp (rbp sub 1) to (rbp add 1)
 [>>+>+<<<-]>>>[-<<<+>>>]<
 [<]
 
-cp (rbp sub 2) add 1 to (rbp add 2)
+cp (rbp sub 2) to (rbp add 2)
 <<
 >>>>[-]>[-]<<<<<
-[>>>>+>+<<<<<-]>>>>>[-<<<<<+>>>>>]<+
+[>>>>+>+<<<<<-]>>>>>[-<<<<<+>>>>>]<
 [<]
 
-cmp (rbp add 1) with (rbp add 2)
+cmp (rbp add 1) leq (rbp add 2)
 >
 [[->]<[<]>]<<<
 [<]
@@ -68,5 +68,22 @@ ret (rbp sub 1)
 <<[-]>>
 [-<<+>>]
 <[-]<
+[<]
+
+
+
+posx = changepos()
+>>[-]
+>>[-<<+>>]<
+[<]
+
+return value for fn call
+>>>>+
+[<]
+
+cp posx to (rbp add 4)
+>>
+>>>[-]>[-]<<<<
+[>>>+>+<<<<-]>>>>[-<<<<+>>>>]<
 [<]
 
