@@ -15,8 +15,11 @@ init trees @ (ebp add 3)
 [<]
 
 
+
 ### MAIN LOOP ###
 +[-
+
+
 
 return value for fn call
 >>>>+
@@ -128,6 +131,7 @@ ret (ebp sub 1)
 [<]
 
 
+
 if checktree(posx) gt 1 then
 trees = trees add 1
 endif
@@ -136,5 +140,7 @@ endif
 [<]
 
 
+
 +]-
 ### END MAIN LOOP ###
+
