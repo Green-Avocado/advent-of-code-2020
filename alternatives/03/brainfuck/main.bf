@@ -1,18 +1,22 @@
 main()
 [-]
 
-init width = (ebp add 1)
+init width @ (ebp add 1)
 >+
 >>+[,<++++[>--------<-]<+>>]<<-
 [<]
 
-init posx
+init posx @ (ebp add 2)
 >>+
 [<]
 
-init trees
+init trees @ (ebp add 3)
 >>>+
 [<]
+
+
+### MAIN LOOP ###
++[-
 
 return value for fn call
 >>>>+
@@ -105,10 +109,10 @@ cmp (ebp add 1) neq 46
 [<]
 
 if (ebp add 1) then
-(ebp sub 2) = (ebp sub 2) add 1 
+(ebp sub 1) = 2 
 endif
 >
-[[-]<<<+>>>]<
+[[-]<<[-]++>>]<
 [<]
 
 read to ' '
@@ -116,11 +120,21 @@ read to ' '
 [,>++++[<-------->-]<]<
 [<]
 
-ret (ebp sub 2)
-<<
+ret (ebp sub 1)
+<
 <[-]>
 [-<+>]
->[-]<<
+<
 [<]
 
 
+if checktree(posx) gt 1 then
+trees = trees add 1
+endif
+>>>
+>-[[-]<+>]<
+[<]
+
+
++]-
+### END MAIN LOOP ###
