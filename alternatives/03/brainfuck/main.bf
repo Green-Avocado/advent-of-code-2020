@@ -2,7 +2,7 @@ main()
 
 init (width) = (rbp a1)
 >+
->>+[,<++++[>--------<-]<+>>]<<
+>>+[,<++++[>--------<-]<+>>]<<-
 [<]
 
 init (posx)
@@ -17,13 +17,13 @@ return value for fn call
 >>>>+
 [<]
 
-cp (width a1) to (rbp a4)
+cp width add 1 to (rbp add 4)
 >
 >>>>[-]>[-]<<<<<
 [>>>>+>+<<<<<-]>>>>>[-<<<<<+>>>>>]<
 [<]
 
-cp (posx) to (rbp a5)
+cp posx to (rbp add 5)
 >>
 >>>>[-]>[-]<<<<<
 [>>>>+>+<<<<<-]>>>>>[-<<<<<+>>>>>]<
@@ -34,20 +34,39 @@ cp (posx) to (rbp a5)
 changepos()
 >>>>>>>[-]
 
-(rbp s1) = (rbp s1 a3)
+(rbp sub 1) = (rbp sub 1) add 3
 <
 +++
 [>]
 
-cp (rbp s1) to (rbp a1)
+cp (rbp sub 1) to (rbp add 1)
 <
 >>[-]>[-]<<<
 [>>+>+<<<-]>>>[-<<<+>>>]<
 [<]
 
-cp (rbp s2) to (rbp a2)
+cp (rbp sub 2) add 1 to (rbp add 2)
 <<
 >>>>[-]>[-]<<<<<
-[>>>>+>+<<<<<-]>>>>>[-<<<<<+>>>>>]<
+[>>>>+>+<<<<<-]>>>>>[-<<<<<+>>>>>]<+
+[<]
+
+cmp (rbp add 1) with (rbp add 2)
+>
+[[->]<[<]>]<<<
+[<]
+
+if (rbp add 1)
+(rbp sub 1) = (rbp sub 1) sub (rbp sub 2)
+endif
+>
+[<<<[->-<]>>>[-]]<
+[<]
+
+ret (rbp sub 1)
+<
+<<[-]>>
+[-<<+>>]
+<[-]<
 [<]
 
