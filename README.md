@@ -22,3 +22,8 @@ https://adventofcode.com/
  - part1 [brainfuck](alternatives/03/brainfuck/part1.bf)
  - part2 [c](src/03/part2.c)
 
+### Day 4
+
+ - part1 [c](src/04/part1.c)
+ - part2 [c](src/04/part2.c)
+
