@@ -1,4 +1,5 @@
 main()
+[-]
 
 init width = (rbp add 1)
 >+
@@ -39,10 +40,10 @@ changepos()
 +++
 [>]
 
-cp (rbp sub 1) to (rbp add 1)
+cp (rbp sub 1) add 1 to (rbp add 1)
 <
 >>[-]>[-]<<<
-[>>+>+<<<-]>>>[-<<<+>>>]<
+[>>+>+<<<-]>>>[-<<<+>>>]<+
 [<]
 
 cp (rbp sub 2) to (rbp add 2)
@@ -51,16 +52,16 @@ cp (rbp sub 2) to (rbp add 2)
 [>>>>+>+<<<<<-]>>>>>[-<<<<<+>>>>>]<
 [<]
 
-cmp (rbp add 1) leq (rbp add 2)
+cmp (rbp add 1) gt (rbp add 2)
 >
 [[->]<[<]>]<<<
 [<]
 
 if (rbp add 1)
-(rbp sub 1) = (rbp sub 1) sub (rbp sub 2)
+(rbp sub 1) = (rbp sub 1) sub (rbp sub 2) add 1
 endif
 >
-[<<<[->-<]>>>[-]]<
+[<<<[->-<]>+>>[-]]<
 [<]
 
 ret (rbp sub 1)
@@ -86,4 +87,10 @@ cp posx to (rbp add 4)
 >>>[-]>[-]<<<<
 [>>>+>+<<<<-]>>>>[-<<<<+>>>>]<
 [<]
+
+
+
+checktree()
+>>>>>>[-]
+
 
