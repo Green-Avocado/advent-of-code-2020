@@ -1,7 +1,7 @@
 main()
 [-]
 
-init width = (rbp add 1)
+init width = (ebp add 1)
 >+
 >>+[,<++++[>--------<-]<+>>]<<-
 [<]
@@ -18,13 +18,13 @@ return value for fn call
 >>>>+
 [<]
 
-cp width to (rbp add 4)
+cp width to (ebp add 4)
 >
 >>>>[-]>[-]<<<<<
 [>>>>+>+<<<<<-]>>>>>[-<<<<<+>>>>>]<
 [<]
 
-cp posx to (rbp add 5)
+cp posx to (ebp add 5)
 >>
 >>>>[-]>[-]<<<<<
 [>>>>+>+<<<<<-]>>>>>[-<<<<<+>>>>>]<
@@ -32,39 +32,39 @@ cp posx to (rbp add 5)
 
 
 
-changepos()
+changepos(posx width)
 >>>>>>>[-]
 
-(rbp sub 1) = (rbp sub 1) add 3
+(ebp sub 1) = (ebp sub 1) add 3
 <
 +++
 [>]
 
-cp (rbp sub 1) add 1 to (rbp add 1)
+cp (ebp sub 1) add 1 to (ebp add 1)
 <
 >>[-]>[-]<<<
 [>>+>+<<<-]>>>[-<<<+>>>]<+
 [<]
 
-cp (rbp sub 2) to (rbp add 2)
+cp (ebp sub 2) to (ebp add 2)
 <<
 >>>>[-]>[-]<<<<<
 [>>>>+>+<<<<<-]>>>>>[-<<<<<+>>>>>]<
 [<]
 
-cmp (rbp add 1) gt (rbp add 2)
+cmp (ebp add 1) gt (ebp add 2)
 >
 [[->]<[<]>]<<<
 [<]
 
-if (rbp add 1)
-(rbp sub 1) = (rbp sub 1) sub (rbp sub 2) add 1
+if (ebp add 1)
+(ebp sub 1) = (ebp sub 1) sub (ebp sub 2) add 1
 endif
 >
 [<<<[->-<]>+>>[-]]<
 [<]
 
-ret (rbp sub 1)
+ret (ebp sub 1)
 <
 <<[-]>>
 [-<<+>>]
@@ -73,7 +73,7 @@ ret (rbp sub 1)
 
 
 
-posx = changepos()
+posx = changepos(posx width)
 >>[-]
 >>[-<<+>>]<
 [<]
@@ -82,7 +82,7 @@ return value for fn call
 >>>>+
 [<]
 
-cp posx to (rbp add 4)
+cp posx to (ebp add 4)
 >>
 >>>[-]>[-]<<<<
 [>>>+>+<<<<-]>>>>[-<<<<+>>>>]<
@@ -90,7 +90,13 @@ cp posx to (rbp add 4)
 
 
 
-checktree()
+checktree(posx)
 >>>>>>[-]
+
+(ebp add 1) = *(input add (ebp sub 1))
+>+
+<<
+[->>,<<]+
+[>]
 
 
