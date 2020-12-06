@@ -105,3 +105,79 @@ This gives us our highest id:
 
 # awk part 2
 
+Since all seats are filled except possibly ones at the ends, every split (`B` or `F` and `L` or `R`) should have an even number of people, except at the ends.
+
+We can start by using `awk` to traverse the binary tree with a depth of 1, and pipe it into `wc -l` to count the number of results.
+
+```
+$ awk '/^F/' input | wc -l
+428
+$ awk '/^B/' input | wc -l
+354
+```
+
+Both are still positive, so we have to traverse another layer:
+
+```
+$ awk '/^FF/' input | wc -l
+172
+$ awk '/^BF/' input | wc -l
+255
+```
+
+This tells us that there is an odd number of tickets starting with `BF` and also an odd number starting with `BB`.
+Our ticket must fall in this category.
+
+Note that the `BB` section is and end section, while `BF` is between `BB` and `FB`.
+
+The odd number in `BB` is likely due to it being located at the rear, so some seats dont exist.
+So our ticket must start with `BF`.
+
+From here, we can continue to traverse the binary tree, following the odd path.
+
+```
+$ awk '/^BFF/' input | wc -l
+127
+$ awk '/^BFFF/' input | wc -l
+64
+$ awk '/^BFFBF/' input | wc -l
+31
+$ awk '/^BFFBFF/' input | wc -l
+15
+$ awk '/^BFFBFFF/' input | wc -l
+7
+```
+
+The same is done to find the column:
+
+```
+$ awk '/^BFFBFFFL/' input | wc -l
+4
+$ awk '/^BFFBFFFRL/' input | wc -l
+2
+```
+
+Through process of elimination, our ticket must begin with `BFFBFFFRR`.
+
+If we search the input file for this sequence, we find that one of the two remaining possibilities is already taken:
+
+```
+$ awk '/^BFFBFFFRR/' input
+BFFBFFFRRL
+```
+
+Therefore, our ticket must be the other option: `BFFBFFFRRR`.
+
+We can convert this to an id using the same method from part 1:
+
+```
+row = 64 + 0 + 0 + 8 + 0 + 0 + 0 = 72
+col = 4 + 2 + 1 = 7
+```
+
+This gives is our id:
+
+```
+id = 72 * 8 + 7 = 583
+```
+
