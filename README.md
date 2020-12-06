@@ -6,24 +6,23 @@ https://adventofcode.com/
 
 ### Day 1
 
- - part1 [c](src/01/part1.c)
- - part1 [rockstar](alternatives/01/rockstar/part1.rock)
- - part2 [c](src/01/part2.c)
- - part2 [rockstar](alternatives/01/rockstar/part2.rock)
+ - [c](src/01)
+ - [rockstar](alternatives/01/rockstar)
 
 ### Day 2
 
- - part1 [c](src/02/part1.c)
- - part2 [c](src/02/part2.c)
+ - [c](src/02)
 
 ### Day 3
 
- - part1 [c](src/03/part1.c)
- - part1 [brainfuck](alternatives/03/brainfuck/part1.bf)
- - part2 [c](src/03/part2.c)
+ - [c](src/03)
+ - [brainfuck](alternatives/03/brainfuck)
 
 ### Day 4
 
- - part1 [c](src/04/part1.c)
- - part2 [c](src/04/part2.c)
+ - [c](src/04)
 
+### Day 5
+
+ - [c](src/05)
+ - [awk](alternatives/05/awk)
