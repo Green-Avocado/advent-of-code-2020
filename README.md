@@ -26,3 +26,7 @@ https://adventofcode.com/
 
  - [c](src/05)
  - [awk](alternatives/05/awk)
+
+### Day 6
+
+ - [c](src/06)
