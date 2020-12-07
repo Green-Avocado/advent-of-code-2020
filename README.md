@@ -30,3 +30,8 @@ https://adventofcode.com/
 ### Day 6
 
  - [c](src/06)
+
+### Day 7
+
+ - [c](src/07)
+
