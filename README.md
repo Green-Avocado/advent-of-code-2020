@@ -35,3 +35,7 @@ https://adventofcode.com/
 
  - [c](src/07)
 
+### Day 8
+
+ - [c](src/08)
+
