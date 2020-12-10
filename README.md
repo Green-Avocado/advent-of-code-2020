@@ -39,3 +39,10 @@ https://adventofcode.com/
 
  - [c](src/08)
 
+### Day 9
+
+ - [c](src/09)
+
+### Day 10
+
+ - [c](src/10)
