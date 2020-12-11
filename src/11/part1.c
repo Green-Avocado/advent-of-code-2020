@@ -80,7 +80,6 @@ int seats_round(char seats[MAXH][MAXW], int height, int width)
         }
     }
 
-
     return diffs;
 }
 
