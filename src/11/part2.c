@@ -48,14 +48,16 @@ int seats_round(char seats[MAXH][MAXW], int height, int width)
             {
                 int filledNear = 0;
 
-                filledNear += look_diagonal(old, height, width, h, w, -1, -1);
-                filledNear += look_diagonal(old, height, width, h, w, -1,  0);
-                filledNear += look_diagonal(old, height, width, h, w, -1,  1);
-                filledNear += look_diagonal(old, height, width, h, w,  0,  1);
-                filledNear += look_diagonal(old, height, width, h, w,  1,  1);
-                filledNear += look_diagonal(old, height, width, h, w,  1,  0);
-                filledNear += look_diagonal(old, height, width, h, w,  1, -1);
-                filledNear += look_diagonal(old, height, width, h, w,  0, -1);
+                for(int dy = -1; dy <= 1; dy++)
+                {
+                    for(int dx = -1; dx <= 1; dx++)
+                    {
+                        if(dx != 0 || dy != 0)
+                        {
+                            filledNear += look_diagonal(old, height, width, h, w, dy, dx);
+                        }
+                    }
+                }
 
                 if(old[h][w] == 'L' && filledNear == 0)
                 {
