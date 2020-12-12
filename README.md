@@ -54,4 +54,5 @@ https://adventofcode.com/
 ### Day 12
 
  - [c](src/12)
+ - [scratch](alternatives/12/scratch)
 
