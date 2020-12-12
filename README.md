@@ -51,3 +51,7 @@ https://adventofcode.com/
 
  - [c](src/11)
 
+### Day 12
+
+ - [c](src/12)
+
