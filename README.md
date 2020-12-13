@@ -56,3 +56,7 @@ https://adventofcode.com/
  - [c](src/12)
  - [scratch](alternatives/12/scratch)
 
+### Day 13
+
+ - [c](src/13)
+
