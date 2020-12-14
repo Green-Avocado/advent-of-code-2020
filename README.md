@@ -60,3 +60,7 @@ https://adventofcode.com/
 
  - [c](src/13)
 
+### Day 14
+
+ - [c](src/14)
+
