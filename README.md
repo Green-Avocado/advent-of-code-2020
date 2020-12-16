@@ -68,3 +68,7 @@ https://adventofcode.com/
 
  - [c](src/15)
 
+### Day 16
+
+ - [c](src/16)
+
