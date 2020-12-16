@@ -49,6 +49,8 @@ int main()
 
     printf("%d\n", age);
 
+    free(history);
+
     return 0;
 }
 
