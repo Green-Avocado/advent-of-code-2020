@@ -8,7 +8,7 @@ struct Rule
 
     int subs[8][8];
     int subs_len;
-    int subs_subs_len;
+    int subs_subs_len[8];
 };
 
 void merge(struct Rule *out, struct Rule *arr1, int len1, struct Rule *arr2, int len2)
@@ -108,7 +108,45 @@ int main()
             }
             else
             {
-                //TODO
+                rules[rules_length].type = 1;
+                rules[rules_length].subs_len = 0;
+                rules[rules_length].subs_subs_len[0] = 0;
+
+                int sub_num = 0;
+                int sub_sub_num = 0;
+                int i = index1;
+
+                while(line[i] != '\n')
+                {
+                    if(line[i] == ' ')
+                    {
+                        i++;
+                    }
+                    else if(line[i] == '|')
+                    {
+                        rules[rules_length].subs_len++;
+                        rules[rules_length].subs_subs_len[sub_num] = 0;
+
+                        sub_num++;
+                        i++;
+                    }
+                    else
+                    {
+                        int shift;
+
+                        sscanf(
+                                line + i,
+                                "%d%n",
+                                &(rules[rules_length].subs[sub_num][sub_sub_num]),
+                                &shift
+                                );
+
+                        rules[rules_length].subs_subs_len[sub_num]++;
+
+                        sub_sub_num++;
+                        i += shift;
+                    }
+                }
             }
 
             rules_length++;
