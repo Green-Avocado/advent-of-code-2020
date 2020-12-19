@@ -64,6 +64,8 @@ int validate(char *message, struct Rule *rules, int rules_length)
 {
     int valid = 1;
 
+    //TODO
+
     return valid;
 }
 
