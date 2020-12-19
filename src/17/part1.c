@@ -78,7 +78,7 @@ int main()
         {
             if(line[i] == '#')
             {
-                grid[getPos(max_size, i, size, 0)] = '1';
+                grid[getPos(max_size, i, size, 0)] = 1;
             }
             
             i++;
