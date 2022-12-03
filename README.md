@@ -6,73 +6,73 @@ https://adventofcode.com/2020/
 
 ### Day 1
 
- - [c](src/01)
+ - [c](solutions/01)
  - [rockstar](alternatives/01/rockstar)
 
 ### Day 2
 
- - [c](src/02)
+ - [c](solutions/02)
 
 ### Day 3
 
- - [c](src/03)
+ - [c](solutions/03)
  - [brainfuck](alternatives/03/brainfuck)
 
 ### Day 4
 
- - [c](src/04)
+ - [c](solutions/04)
 
 ### Day 5
 
- - [c](src/05)
+ - [c](solutions/05)
  - [awk](alternatives/05/awk)
 
 ### Day 6
 
- - [c](src/06)
+ - [c](solutions/06)
 
 ### Day 7
 
- - [c](src/07)
+ - [c](solutions/07)
 
 ### Day 8
 
- - [c](src/08)
+ - [c](solutions/08)
 
 ### Day 9
 
- - [c](src/09)
+ - [c](solutions/09)
 
 ### Day 10
 
- - [c](src/10)
+ - [c](solutions/10)
 
 ### Day 11
 
- - [c](src/11)
+ - [c](solutions/11)
 
 ### Day 12
 
- - [c](src/12)
+ - [c](solutions/12)
  - [scratch](alternatives/12/scratch)
 
 ### Day 13
 
- - [c](src/13)
+ - [c](solutions/13)
 
 ### Day 14
 
- - [c](src/14)
+ - [c](solutions/14)
 
 ### Day 15
 
- - [c](src/15)
+ - [c](solutions/15)
 
 ### Day 16
 
- - [c](src/16)
+ - [c](solutions/16)
 
 ### Day 18
 
- - [c](src/18)
+ - [c](solutions/18)
 
